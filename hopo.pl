@@ -159,7 +159,7 @@ sub yahoo_we {
 for my $place (@{$items->{places}}) {
     $place->{cur} = yahoo_we($place->{wid});
     for my $t (qw/cur octo nove dece janu/) {
-        $place->{$t} = temper($place->{$t}, 1);
+        $place->{$t} = temper($place->{$t});
     }
 }
 
