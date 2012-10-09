@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>[= $title =]</title>
+<body style="margin-left: 4em; margin-top: 2em; font-size: 25">
+<p>В Москве сейчас [= $cur_temp =] °C, <!-- дождь идёт уже [= $raining =] [= $raining_h =] --> <!-- пробки — [= $probki =], Путин у власти уже 12 лет и будет ещё 12 лет. --> ветер северный. Потепление ожидается через 6 месяцев.
+<br>
+<p>Но есть и другие места:<br>
+<br>
+<table border=1 frame=void rules=cols cellpadding=4px>
+<thead>
+<tr align="left">
+<th>
+<th>Сейчас, °C
+<th>Обычно днём в октябре
+<th>...ноябре
+<th>...декабре
+<th>...январе
+<th>
+</tr>
+</thead>
+<tbody>
+
+<?pl for my $place (@$places) { ?>
+
+<tr>
+<td>[= $place->{title} =]
+<td align=right>[= $place->{cur} =]
+<td align=right>[= $place->{octo} =]
+<td align=right>[= $place->{nove} =]
+<td align=right>[= $place->{dece} =]
+<td align=right>[= $place->{janu} =]
+<td align=right><a target=_blank href="http://images.yandex.ru/yandsearch?text=[= $place->{search} =]&type=photo&icolor=color">фотки</a>, <a target=_blank href="http://yandex.ru/yandsearch?text=билеты+[= $place->{search} =]">билеты</a>, <a target=_blank href="http://ostrovok.ru/hotels/?destination=[= $place->{search} =]&nodates=true">отели<sub>1</sub></a>, <a target=_blank href="http://yandex.ru/yandsearch?text=отели+[= $place->{search} =]">отели<sub>2</sub></a>, <a target=_blank href="http://yandex.ru/yandsearch?text=туры+[= $place->{search} =]">туры</a>
+</tr>
+
+<?pl } ?>
+</table>
+<p>
+<div style="float: right; font-size: 14px; color: #cccccc">[= $timestamp =] по Москве, <a href="mailto:kappa@yandex.com">@</a></div>
+<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+<div class="yashare-auto-init" data-yashareL10n="ru" style="font-size: 14"
+data-yashareType="link"
+data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,friendfeed,gplus,surfingbird"></div> 
+<br>
+<div id="hypercomments_widget"></div><script type="text/javascript">
+var _hcp = _hcp || {};
+_hcp.widget_id = 3282;
+_hcp.widget = "Stream";
+(function() { 
+    var hcc = document.createElement("script"); hcc.type =
+    "text/javascript"; hcc.async = true;
+    hcc.src = ("https:" == document.location.protocol ? "https" :
+    "http")+"://widget.hypercomments.com/apps/js/hc.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hcc, s.nextSibling); 
+})();</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter17571985 = new Ya.Metrika({id:17571985, enableAll: true, webvisor:true});
+        } catch(e) { }
+    });
+    
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/17571985" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</html>
