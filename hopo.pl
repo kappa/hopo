@@ -200,6 +200,8 @@ for my $place (@{$items->{places}}) {
 }
 
 $items->{cur_temp} = temper(yahoo_we(24553382));
+$items->{cur_temp_mrmnsk} = temper(yahoo_we(2122296));
+$items->{cur_temp_krsndr} = temper(yahoo_we(2028717));
 $items->{timestamp} = "" . localtime;
 $items->{raining} = int((time - 1349647200) / 3600);
 $items->{raining_h} = numdecl($items->{raining}, 'час', 'часа', 'часов');
