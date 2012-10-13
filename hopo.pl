@@ -180,7 +180,7 @@ sub temper {
     my $dec = shift || 0;
 
     my $temp_str = sprintf "%.${dec}f", $temp_num;
-    $temp_str = $temp_num < 0 ? ("&ndash;" . -$temp_str) : "+$temp_str";
+    $temp_str = $temp_num < 0 ? ("–" . -$temp_str) : "+$temp_str";
     $temp_str =~ tr/./,/;
 
     return $temp_str;
