@@ -172,6 +172,19 @@ my $items = {
             visa    => 'нет',
             flight  => 15,
         },
+        {
+            title   => 'Марокко, Агадир',
+            cur     => 27,
+            octo    => 25.3,
+            nove    => 23.5,
+            dece    => 20.7,
+            janu    => 20.4,
+            search  => 'марокко',
+            search_en   => 'morocco',
+            wid     => 1542773,
+            visa    => 'нет',
+            flight  => 16,
+        },
     ],
 };
 
