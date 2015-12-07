@@ -2,13 +2,13 @@
 <head>
 <title>[= $title =]</title>
 <body style="margin-left: 4em; margin-top: 2em; font-size: 25">
-<p>В Москве сейчас [= $cur_temp =] °C.
-<!-- дождь идёт уже [= $raining =] [= $raining_h =] -->
+<p>В Москве сейчас [= $cur_temp =] °C.<!-- и холодный дождь. -->
+<!-- Дождь идёт уже [= $raining =] [= $raining_h =] -->
 <!-- пробки — [= $probki =], Путин у власти уже 12 лет и будет ещё 12 лет. -->
 <!-- ветер северный. Потепление ожидается через 6 месяцев. -->
 <!-- В Мурманске вообще [= $cur_temp_mrmnsk =] °C. Даже в Краснодаре всего [= $cur_temp_krsndr =] °C. -->
-<!-- В Питере кроме ночного топота котов запретили ещё и стоны со скрипами. -->
-Будет только хуже.
+<br>А будет только хуже.
+Хотя казалось бы.
 <br>
 <p>Но есть и другие места:<br>
 <br>
@@ -17,8 +17,7 @@
 <tr align="left">
 <th>
 <th>Сейчас, °C
-<th>Обычно днём в октябре
-<th>...ноябре
+<th>Обычно днём в ноябре
 <th>...декабре
 <th>...январе
 <th>Виза
@@ -33,13 +32,12 @@
 <tr>
 <td>[= $place->{title} =]
 <td align=right>[= $place->{cur} =]
-<td align=right>[= $place->{octo} =]
 <td align=right>[= $place->{nove} =]
 <td align=right>[= $place->{dece} =]
 <td align=right>[= $place->{janu} =]
 <td align=right>[= $place->{visa} =]
 <td align=right>[= $place->{flight} =] ч
-<td align=right><a target=_blank href="http://images.yandex.ru/yandsearch?text=[= $place->{search} =]&type=photo&icolor=color">фотки<sub>1</sub></a>, <a target=_blank href="http://searchinstagram.com/[= $place->{search_en} =]">фотки<sub>2</sub></a>, <a target=_blank href="http://yandex.ru/yandsearch?text=авиабилеты+[= $place->{search} =]">билеты</a>, <a target=_blank href="http://ostrovok.ru/hotels/?destination=[= $place->{search} =]&nodates=true">отели<sub>1</sub></a>, <a target=_blank href="http://yandex.ru/yandsearch?text=отели+[= $place->{search} =]">отели<sub>2</sub></a>, <a target=_blank href="http://yandex.ru/yandsearch?text=туры+[= $place->{search} =]">туры</a>
+<td align=right><a target=_blank href="http://images.yandex.ru/yandsearch?text=[= $place->{search} =]&type=photo&icolor=color">фотки<sub>1</sub></a>, <a target=_blank href="http://yandex.ru/yandsearch?text=авиабилеты+[= $place->{search} =]">билеты</a>, <a target=_blank href="https://airbnb.com/s/[= $place->{search} =]">жильё<sub>1</sub></a>, <a target=_blank href="http://yandex.ru/yandsearch?text=отели+[= $place->{search} =]">жильё<sub>2</sub></a>, <a target=_blank href="http://yandex.ru/yandsearch?text=туры+[= $place->{search} =]">туры</a>
 </tr>
 
 <?pl } ?>
@@ -51,27 +49,36 @@
 data-yashareType="link"
 data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,friendfeed,gplus,surfingbird"></div> 
 <br>
-<div id="hypercomments_widget"></div><script type="text/javascript">
-var _hcp = _hcp || {};
-_hcp.widget_id = 3282;
-_hcp.widget = "Stream";
-(function() { 
-    var hcc = document.createElement("script"); hcc.type =
-    "text/javascript"; hcc.async = true;
-    hcc.src = ("https:" == document.location.protocol ? "https" :
-    "http")+"://widget.hypercomments.com/apps/js/hc.js";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hcc, s.nextSibling); 
-})();</script>
+<div id="hypercomments_widget"></div>
+<script type="text/javascript">
+_hcwp = window._hcwp || [];
+_hcwp.push({widget:"Stream", widget_id: 3282,
+	href: "kapranoff.ru/~kappa/hopo.html"});
+(function() {
+	if("HC_LOAD_INIT" in window)return;
+	HC_LOAD_INIT = true;
+	var lang = (navigator.language || navigator.systemLanguage ||
+	navigator.userLanguage ||  "en").substr(0, 2).toLowerCase();
+	var hcc = document.createElement("script"); hcc.type =
+	"text/javascript"; hcc.async = true;
+	hcc.src = ("https:" == document.location.protocol ? "https" :
+	"http")+"://w.hypercomments.com/widget/hc/3282/"+lang+"/widget.js";
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(hcc, s.nextSibling);
+})();
+</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
 (function (d, w, c) {
     (w[c] = w[c] || []).push(function() {
         try {
-            w.yaCounter17571985 = new Ya.Metrika({id:17571985, enableAll: true, webvisor:true});
+            w.yaCounter22391668 = new Ya.Metrika({id:22391668,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true});
         } catch(e) { }
     });
-    
+
     var n = d.getElementsByTagName("script")[0],
         s = d.createElement("script"),
         f = function () { n.parentNode.insertBefore(s, n); };
@@ -80,10 +87,10 @@ _hcp.widget = "Stream";
     s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
 
     if (w.opera == "[object Opera]") {
-        d.addEventListener("DOMContentLoaded", f);
+        d.addEventListener("DOMContentLoaded", f, false);
     } else { f(); }
 })(document, window, "yandex_metrika_callbacks");
 </script>
-<noscript><div><img src="//mc.yandex.ru/watch/17571985" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="//mc.yandex.ru/watch/22391668" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </html>
